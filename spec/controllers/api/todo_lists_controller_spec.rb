@@ -28,9 +28,10 @@ describe Api::TodoListsController do
 
         aggregate_failures 'includes the id and name' do
           expect(todo_lists.count).to eq(1)
-          expect(todo_lists[0].keys).to match_array(['id', 'name'])
+          expect(todo_lists[0].keys).to match_array(['id', 'name', 'url'])
           expect(todo_lists[0]['id']).to eq(todo_list.id)
           expect(todo_lists[0]['name']).to eq(todo_list.name)
+          expect(todo_lists[0]['url']).to eq(api_todo_list_url(todo_list, format: :json))
         end
       end
     end
