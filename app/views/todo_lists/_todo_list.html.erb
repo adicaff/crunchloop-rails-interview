@@ -1,0 +1,14 @@
+<%= turbo_frame_tag dom_id(todo_list) do %>
+  <div class="todo-list-card">
+    <div class="todo-list-header">
+      <h3><%= link_to todo_list.name, todo_list, data: { turbo_frame: "_top" } %></h3>
+      <div class="actions">
+        <%= link_to "Edit", edit_todo_list_path(todo_list), class: "btn-edit" %>
+        <%= button_to "Delete", todo_list, method: :delete, class: "btn-delete", data: { turbo_confirm: "Are you sure?" } %>
+      </div>
+    </div>
+    <div class="item-count">
+      <%= pluralize(todo_list.list_items.count, "item") %>
+    </div>
+  </div>
+<% end %>

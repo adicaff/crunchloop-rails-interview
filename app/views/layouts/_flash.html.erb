@@ -1,0 +1,6 @@
+<% flash.each do |type, message| %>
+  <div class="flash <%= type %>" data-controller="flash">
+    <%= message %>
+    <button type="button" class="btn-close-flash" data-action="click->flash#dismiss">&times;</button>
+  </div>
+<% end %>

@@ -1,0 +1,4 @@
+<%= turbo_stream.prepend "list_items", @list_item %>
+<%= turbo_stream.replace "new_list_item" do %>
+  <%= render "list_items/form", todo_list: @todo_list, list_item: @todo_list.list_items.new %>
+<% end %>
