@@ -1,11 +1,12 @@
 class TodoListsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_todo_list, only: %i[edit update destroy mark_all_done]
   before_action :set_todo_list_with_items, only: %i[show]
 
   # GET /todolists
   def index
-    @todo_lists = TodoList.all
-    @todo_list = TodoList.new
+    @todo_lists = current_user.todo_lists.order(created_at: :desc)
+    @todo_list = current_user.todo_lists.new
   end
 
   # GET /todolists/:id
@@ -13,7 +14,7 @@ class TodoListsController < ApplicationController
 
   # GET /todolists/new
   def new
-    @todo_list = TodoList.new
+    @todo_list = current_user.todo_lists.new
   end
 
   # GET /todolists/:id/edit
@@ -21,14 +22,20 @@ class TodoListsController < ApplicationController
 
   # POST /todolists
   def create
-    @todo_list = TodoList.new(todo_list_params)
+    @todo_list = current_user.todo_lists.new(todo_list_params)
 
     respond_to do |format|
       if @todo_list.save
         format.html { redirect_to todo_lists_path, notice: t('todo_lists.created') }
         format.turbo_stream
       else
-        format.html { render :new, status: :unprocessable_entity }
+        @todo_lists = current_user.todo_lists.order(created_at: :desc)
+        format.html { render :index, status: :unprocessable_entity }
+        format.turbo_stream do
+          render turbo_stream: turbo_stream.update('new_todo_list',
+                                                   partial: 'form',
+                                                   locals: { todo_list: @todo_list })
+        end
       end
     end
   end
@@ -41,6 +48,11 @@ class TodoListsController < ApplicationController
         format.turbo_stream
       else
         format.html { render :edit, status: :unprocessable_entity }
+        format.turbo_stream do
+          render turbo_stream: turbo_stream.replace(dom_id(@todo_list),
+                                                    partial: 'form',
+                                                    locals: { todo_list: @todo_list })
+        end
       end
     end
   end
@@ -66,11 +78,11 @@ class TodoListsController < ApplicationController
   private
 
   def set_todo_list
-    @todo_list = TodoList.find(params[:id])
+    @todo_list = current_user.todo_lists.find(params[:id])
   end
 
   def set_todo_list_with_items
-    @todo_list = TodoList.includes(:list_items).find(params[:id])
+    @todo_list = current_user.todo_lists.includes(:list_items).find(params[:id])
   end
 
   def todo_list_params

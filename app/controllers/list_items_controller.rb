@@ -1,4 +1,5 @@
 class ListItemsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_todo_list
   before_action :set_list_item, only: %i[update destroy]
 
@@ -10,13 +11,7 @@ class ListItemsController < ApplicationController
         format.html { redirect_to @todo_list }
         format.turbo_stream
       else
-        format.html do
-          @todo_list = TodoList.includes(:list_items).find(@todo_list.id)
-          render 'todo_lists/show', status: :unprocessable_entity
-        end
-        format.turbo_stream do
-          render turbo_stream: turbo_stream.replace('new_list_item', partial: 'list_items/form', locals: { todo_list: @todo_list, list_item: @list_item })
-        end
+        handle_create_error(format)
       end
     end
   end
@@ -42,8 +37,20 @@ class ListItemsController < ApplicationController
 
   private
 
+  def handle_create_error(format)
+    format.html do
+      @todo_list = current_user.todo_lists.includes(:list_items).find(@todo_list.id)
+      render 'todo_lists/show', status: :unprocessable_entity
+    end
+    format.turbo_stream do
+      render turbo_stream: turbo_stream.replace('new_list_item',
+                                                partial: 'list_items/form',
+                                                locals: { todo_list: @todo_list, list_item: @list_item })
+    end
+  end
+
   def set_todo_list
-    @todo_list = TodoList.find(params[:todo_list_id])
+    @todo_list = current_user.todo_lists.find(params[:todo_list_id])
   end
 
   def set_list_item

@@ -1,7 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe 'TodoLists', type: :request do
-  let!(:todo_list) { TodoList.create!(name: 'My List') }
+  let(:user) { User.create!(username: 'testuser', password: 'password') }
+  let!(:todo_list) { TodoList.create!(name: 'My List', user: user) }
+
+  before do
+    sign_in user
+  end
 
   describe 'GET /todolists/:id/edit' do
     it 'renders the edit form' do
@@ -16,6 +21,14 @@ RSpec.describe 'TodoLists', type: :request do
     it 'renders the index with todo list frames' do
       get todo_lists_path
       expect(response.body).to include("turbo-frame id=\"todo_list_#{todo_list.id}\"")
+    end
+
+    it 'renders the empty state when no todo lists exist' do
+      current_user = user
+      current_user.todo_lists.destroy_all
+      get todo_lists_path
+      expect(response.body).to include('Welcome to your Todo App!')
+      expect(response.body).to include('Create your first one above to get started!')
     end
   end
 
@@ -38,6 +51,20 @@ RSpec.describe 'TodoLists', type: :request do
     context 'with invalid parameters' do
       it 'returns unprocessable entity' do
         patch todo_list_path(todo_list), params: { todo_list: { name: '' } }
+        expect(response).to have_http_status(:unprocessable_entity)
+      end
+    end
+  end
+
+  describe 'POST /todolists' do
+    context 'with invalid parameters' do
+      it 'returns unprocessable entity' do
+        post todo_lists_path, params: { todo_list: { name: '' } }
+        expect(response).to have_http_status(:unprocessable_entity)
+      end
+
+      it 'returns unprocessable entity with turbo stream' do
+        post todo_lists_path, params: { todo_list: { name: '' } }, as: :turbo_stream
         expect(response).to have_http_status(:unprocessable_entity)
       end
     end

@@ -1,0 +1,37 @@
+<div class="container devise-container">
+  <div class="header">
+    <h1>Sign up</h1>
+  </div>
+
+  <div class="form-container">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "todo-list-form" }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="field">
+        <%= f.label :username %>
+        <%= f.text_field :username, autofocus: true, autocomplete: "username", placeholder: "Choose a username..." %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %>
+        <%= f.password_field :password, autocomplete: "new-password", placeholder: "Choose a password..." %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm your password..." %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Sign up", class: "btn-primary" %>
+      </div>
+    <% end %>
+
+    <div class="devise-links">
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>

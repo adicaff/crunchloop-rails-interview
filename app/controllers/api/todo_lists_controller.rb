@@ -1,11 +1,12 @@
 module Api
   class TodoListsController < ApplicationController
     skip_before_action :verify_authenticity_token
+    before_action :authenticate_user!
     before_action :set_todo_list, only: %i[show update destroy]
 
     # GET /api/todolists
     def index
-      @todo_lists = TodoList.all
+      @todo_lists = current_user.todo_lists
     end
 
     # GET /api/todolists/:id
@@ -13,7 +14,7 @@ module Api
 
     # POST /api/todolists
     def create
-      @todo_list = TodoList.new(todo_list_params)
+      @todo_list = current_user.todo_lists.new(todo_list_params)
 
       if @todo_list.save
         render :show, status: :created
@@ -40,7 +41,7 @@ module Api
     private
 
     def set_todo_list
-      @todo_list = TodoList.find(params[:id])
+      @todo_list = current_user.todo_lists.find(params[:id])
     end
 
     def todo_list_params
