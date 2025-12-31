@@ -1,7 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe TodoListsController, type: :controller do
-  let!(:todo_list) { TodoList.create!(name: 'Test List') }
+  let(:user) { User.create!(username: 'testuser', password: 'password') }
+  let!(:todo_list) { TodoList.create!(name: 'Test List', user: user) }
+
+  before do
+    sign_in user
+  end
 
   describe 'POST #mark_all_done' do
     it 'enqueues UpdateListItemsJob' do

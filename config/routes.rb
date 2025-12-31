@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   namespace :api do
     resources :todo_lists, path: :todolists do
       resources :list_items, path: :items, only: %i[index show create update destroy]

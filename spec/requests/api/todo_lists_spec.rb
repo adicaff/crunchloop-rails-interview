@@ -1,7 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe 'Api::TodoLists', type: :request do
-  let!(:todo_list) { TodoList.create(name: 'First List') }
+  let(:user) { User.create!(username: 'apiuser', password: 'password') }
+  let!(:todo_list) { TodoList.create(name: 'First List', user: user) }
+
+  before do
+    sign_in user
+  end
 
   describe 'GET /api/todolists' do
     it 'returns all todo lists' do

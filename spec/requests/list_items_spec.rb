@@ -1,8 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe 'ListItems', type: :request do
-  let!(:todo_list) { TodoList.create!(name: 'My List') }
+  let(:user) { User.create!(username: 'testuser', password: 'password') }
+  let!(:todo_list) { TodoList.create!(name: 'My List', user: user) }
   let!(:list_item) { todo_list.list_items.create!(description: 'Item 1') }
+
+  before do
+    sign_in user
+  end
 
   describe 'POST /todolists/:todo_list_id/items' do
     it 'creates a new item and redirects' do

@@ -1,6 +1,7 @@
 module Api
   class ListItemsController < ApplicationController
     skip_before_action :verify_authenticity_token
+    before_action :authenticate_user!
     before_action :set_todo_list
     before_action :set_list_item, only: %i[show update destroy]
 
@@ -41,7 +42,7 @@ module Api
     private
 
     def set_todo_list
-      @todo_list = TodoList.find(params[:todo_list_id])
+      @todo_list = current_user.todo_lists.find(params[:todo_list_id])
     end
 
     def set_list_item

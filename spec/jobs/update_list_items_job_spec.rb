@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe UpdateListItemsJob, type: :job do
-  let(:todo_list) { TodoList.create!(name: 'Test List') }
+  let(:user) { User.create!(username: 'jobuser', password: 'password') }
+  let(:todo_list) { TodoList.create!(name: 'Test List', user: user) }
   let!(:item_one) { todo_list.list_items.create!(description: 'Item 1', done: false) }
   let!(:item_two) { todo_list.list_items.create!(description: 'Item 2', done: false) }
 

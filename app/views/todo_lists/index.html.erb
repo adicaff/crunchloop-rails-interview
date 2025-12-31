@@ -11,6 +11,13 @@
 
   <%= turbo_stream_from "todo_lists" %>
   <div id="todo_lists" class="todo-lists-grid">
-    <%= render @todo_lists %>
+    <% if @todo_lists.reject(&:new_record?).any? %>
+      <%= render @todo_lists.reject(&:new_record?) %>
+    <% else %>
+      <div id="empty_state" class="empty-state">
+        <h2>Welcome to your Todo App!</h2>
+        <p>You don't have any todo lists yet. Create your first one above to get started!</p>
+      </div>
+    <% end %>
   </div>
 </div>

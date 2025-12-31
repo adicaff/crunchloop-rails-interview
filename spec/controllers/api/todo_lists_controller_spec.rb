@@ -3,8 +3,14 @@ require 'rails_helper'
 describe Api::TodoListsController do
   render_views
 
+  let(:user) { User.create!(username: 'apiuser', password: 'password') }
+
+  before do
+    sign_in user
+  end
+
   describe 'GET index' do
-    let!(:todo_list) { TodoList.create(name: 'Setup RoR project') }
+    let!(:todo_list) { TodoList.create(name: 'Setup RoR project', user: user) }
 
     context 'when format is HTML' do
       it 'raises a routing error' do
