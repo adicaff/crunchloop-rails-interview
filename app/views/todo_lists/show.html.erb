@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="header">
+    <%= link_to "← Back", todo_lists_path, class: "btn-back" %>
+    <h1><%= @todo_list.name %></h1>
+    <div class="header-actions">
+      <%= button_to "Mark All as Done", mark_all_done_todo_list_path(@todo_list), method: :post, class: "btn-action" %>
+    </div>
+  </div>
+
+  <div class="form-container">
+    <%= render "list_items/form", todo_list: @todo_list, list_item: @todo_list.list_items.new %>
+  </div>
+
+  <%= turbo_stream_from @todo_list %>
+  <%= render "todo_lists/list_items", todo_list: @todo_list %>
+</div>

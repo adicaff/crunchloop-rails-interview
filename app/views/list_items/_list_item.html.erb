@@ -1,0 +1,9 @@
+<%= turbo_frame_tag dom_id(list_item) do %>
+  <div class="list-item <%= 'done' if list_item.done %>">
+    <%= form_with(model: [list_item.todo_list, list_item], class: "list-item-form") do |f| %>
+      <%= f.check_box :done, onchange: "this.form.requestSubmit()" %>
+      <span class="description"><%= list_item.description %></span>
+    <% end %>
+    <%= button_to "×", [list_item.todo_list, list_item], method: :delete, class: "btn-delete-item", data: { turbo_confirm: "Delete this item?" } %>
+  </div>
+<% end %>

@@ -10,7 +10,9 @@ rails_interview_test
 
 # Ignore bundler config.
 /.bundle
+/vendor/bundle
 
+/.idea
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*

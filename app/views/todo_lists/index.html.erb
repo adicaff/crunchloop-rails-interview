@@ -1,9 +1,16 @@
-<%= link_to 'Add Todo List', new_todo_list_path %>
+<div class="container">
+  <div class="header">
+    <h1>Todo Lists</h1>
+  </div>
 
-<div>
-  <% @todo_lists.each do |todo_list| %>
-    <div>
-      #<%= todo_list.id %> | <%= todo_list.name %>
-    </div>
-  <% end %>
+  <div class="form-container">
+    <%= turbo_frame_tag "new_todo_list" do %>
+      <%= render "form", todo_list: @todo_list %>
+    <% end %>
+  </div>
+
+  <%= turbo_stream_from "todo_lists" %>
+  <div id="todo_lists" class="todo-lists-grid">
+    <%= render @todo_lists %>
+  </div>
 </div>

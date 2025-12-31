@@ -31,3 +31,9 @@
 
 en:
   hello: "Hello world"
+  todo_lists:
+    created: "Todo list was successfully created."
+    updated: "Todo list was successfully updated."
+    destroyed: "Todo list was successfully destroyed."
+    updating_all: "Updating all items..."
+    all_updated: "All items updated!"
