@@ -12,7 +12,5 @@
   </div>
 
   <%= turbo_stream_from @todo_list %>
-  <div id="list_items" class="list-items">
-    <%= render @todo_list.list_items.order(created_at: :desc) %>
-  </div>
+  <%= render "todo_lists/list_items", todo_list: @todo_list %>
 </div>

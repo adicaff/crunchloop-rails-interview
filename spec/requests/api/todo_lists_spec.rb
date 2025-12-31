@@ -7,7 +7,7 @@ RSpec.describe 'Api::TodoLists', type: :request do
     it 'returns all todo lists' do
       get '/api/todolists', as: :json
       expect(response).to have_http_status(:ok)
-      expect(JSON.parse(response.body).size).to eq(1)
+      expect(response.parsed_body.size).to eq(1)
     end
   end
 
@@ -15,7 +15,7 @@ RSpec.describe 'Api::TodoLists', type: :request do
     it 'returns the todo list' do
       get "/api/todolists/#{todo_list.id}", as: :json
       expect(response).to have_http_status(:ok)
-      json_response = JSON.parse(response.body)
+      json_response = response.parsed_body
       expect(json_response['id']).to eq(todo_list.id)
       expect(json_response['name']).to eq(todo_list.name)
       expect(json_response).to have_key('url')
@@ -26,9 +26,9 @@ RSpec.describe 'Api::TodoLists', type: :request do
     let(:valid_params) { { name: 'New List' } }
 
     it 'creates a new todo list' do
-      expect {
+      expect do
         post '/api/todolists', params: { todo_list: valid_params }, as: :json
-      }.to change(TodoList, :count).by(1)
+      end.to change(TodoList, :count).by(1)
       expect(response).to have_http_status(:created)
     end
 
@@ -48,9 +48,9 @@ RSpec.describe 'Api::TodoLists', type: :request do
 
   describe 'DELETE /api/todolists/:id' do
     it 'destroys the todo list' do
-      expect {
+      expect do
         delete "/api/todolists/#{todo_list.id}", as: :json
-      }.to change(TodoList, :count).by(-1)
+      end.to change(TodoList, :count).by(-1)
       expect(response).to have_http_status(:no_content)
     end
   end

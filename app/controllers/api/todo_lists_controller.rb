@@ -5,12 +5,11 @@ module Api
 
     # GET /api/todolists
     def index
-      @todo_lists = TodoList.all.includes(:list_items)
+      @todo_lists = TodoList.all
     end
 
     # GET /api/todolists/:id
-    def show
-    end
+    def show; end
 
     # POST /api/todolists
     def create

@@ -6,11 +6,11 @@ module Api
 
     # GET /api/todolists/:todo_list_id/items
     def index
+      @list_items = @todo_list.list_items.includes(:todo_list)
     end
 
     # GET /api/todolists/:todo_list_id/items/:id
-    def show
-    end
+    def show; end
 
     # POST /api/todolists/:todo_list_id/items
     def create

@@ -1,1 +1,1 @@
-json.array! @todo_list.list_items, partial: "api/list_items/list_item", as: :list_item
+json.array! @list_items, partial: 'api/list_items/list_item', as: :list_item

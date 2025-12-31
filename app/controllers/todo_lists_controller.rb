@@ -8,8 +8,7 @@ class TodoListsController < ApplicationController
   end
 
   # GET /todolists/:id
-  def show
-  end
+  def show; end
 
   # GET /todolists/new
   def new
@@ -17,8 +16,7 @@ class TodoListsController < ApplicationController
   end
 
   # GET /todolists/:id/edit
-  def edit
-  end
+  def edit; end
 
   # POST /todolists
   def create
@@ -26,7 +24,7 @@ class TodoListsController < ApplicationController
 
     respond_to do |format|
       if @todo_list.save
-        format.html { redirect_to todo_lists_path, notice: "Todo list was successfully created." }
+        format.html { redirect_to todo_lists_path, notice: t('todo_lists.created') }
         format.turbo_stream
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +36,7 @@ class TodoListsController < ApplicationController
   def update
     respond_to do |format|
       if @todo_list.update(todo_list_params)
-        format.html { redirect_to todo_lists_path, notice: "Todo list was successfully updated." }
+        format.html { redirect_to todo_lists_path, notice: t('todo_lists.updated') }
         format.turbo_stream
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -50,7 +48,7 @@ class TodoListsController < ApplicationController
   def destroy
     @todo_list.destroy
     respond_to do |format|
-      format.html { redirect_to todo_lists_path, notice: "Todo list was successfully destroyed." }
+      format.html { redirect_to todo_lists_path, notice: t('todo_lists.destroyed') }
       format.turbo_stream
     end
   end
@@ -59,15 +57,15 @@ class TodoListsController < ApplicationController
   def mark_all_done
     UpdateListItemsJob.perform_later(@todo_list.id, done: true)
     respond_to do |format|
-      format.html { redirect_to @todo_list, notice: "Updating all items..." }
-      format.turbo_stream { flash.now[:notice] = "Updating all items..." }
+      format.html { redirect_to @todo_list, notice: t('todo_lists.updating_all') }
+      format.turbo_stream { flash.now[:notice] = t('todo_lists.updating_all') }
     end
   end
 
   private
 
   def set_todo_list
-    @todo_list = TodoList.find(params[:id])
+    @todo_list = TodoList.includes(:list_items).find(params[:id])
   end
 
   def todo_list_params

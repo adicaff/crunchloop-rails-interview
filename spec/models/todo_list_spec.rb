@@ -11,13 +11,13 @@ RSpec.describe TodoList, type: :model do
 
   describe 'validations' do
     it 'is invalid without a name' do
-      list = TodoList.new(name: nil)
+      list = described_class.new(name: nil)
       expect(list).not_to be_valid
       expect(list.errors[:name]).to include("can't be blank")
     end
 
     it 'is valid with a name' do
-      list = TodoList.new(name: 'Test List')
+      list = described_class.new(name: 'Test List')
       expect(list).to be_valid
     end
   end

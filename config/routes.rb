@@ -12,5 +12,5 @@ Rails.application.routes.draw do
     resources :list_items, only: %i[create update destroy]
   end
 
-  root "todo_lists#index"
+  root 'todo_lists#index'
 end

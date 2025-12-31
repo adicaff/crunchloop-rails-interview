@@ -1,5 +1,5 @@
 class ListItem < ApplicationRecord
-  belongs_to :todo_list
+  belongs_to :todo_list, counter_cache: true
 
   validates :description, presence: true
 

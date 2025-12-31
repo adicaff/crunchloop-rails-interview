@@ -1,20 +1,20 @@
 require 'rails_helper'
 
-RSpec.describe "TodoLists", type: :request do
-  let!(:todo_list) { TodoList.create!(name: "My List") }
+RSpec.describe 'TodoLists', type: :request do
+  let!(:todo_list) { TodoList.create!(name: 'My List') }
 
-  describe "POST /todolists/:id/mark_all_done" do
-    it "updates all items via background job" do
+  describe 'POST /todolists/:id/mark_all_done' do
+    it 'updates all items via background job' do
       ActiveJob::Base.queue_adapter = :test
       post mark_all_done_todo_list_path(todo_list)
       expect(response).to redirect_to(todo_list_path(todo_list))
       expect(UpdateListItemsJob).to have_been_enqueued.with(todo_list.id, done: true)
     end
 
-    it "responds with turbo_stream" do
+    it 'responds with turbo_stream' do
       post mark_all_done_todo_list_path(todo_list), as: :turbo_stream
-      expect(response.media_type).to eq("text/vnd.turbo-stream.html")
-      expect(response.body).to include("turbo-stream")
+      expect(response.media_type).to eq('text/vnd.turbo-stream.html')
+      expect(response.body).to include('turbo-stream')
     end
   end
 end

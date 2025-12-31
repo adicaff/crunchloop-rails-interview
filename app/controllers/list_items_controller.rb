@@ -10,7 +10,7 @@ class ListItemsController < ApplicationController
         format.html { redirect_to @todo_list }
         format.turbo_stream
       else
-        format.html { render "todo_lists/show", status: :unprocessable_entity }
+        format.html { render 'todo_lists/show', status: :unprocessable_entity }
       end
     end
   end
@@ -21,7 +21,7 @@ class ListItemsController < ApplicationController
         format.html { redirect_to @todo_list }
         format.turbo_stream
       else
-        format.html { render "todo_lists/show", status: :unprocessable_entity }
+        format.html { render 'todo_lists/show', status: :unprocessable_entity }
       end
     end
   end

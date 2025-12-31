@@ -1,0 +1,564 @@
+Inspecting 48 files
+CC..CCCCC..CC..C.CC.CCCCCCCC.C..CCC.CCCCCCCCCCCC
+Offenses:
+Gemfile:1:8: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+source "https://rubygems.org"
+       ^^^^^^^^^^^^^^^^^^^^^^
+Gemfile:5:5: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "rails", "~> 7.0.4", ">= 7.0.4.3"
+    ^^^^^^^
+Gemfile:5:14: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "rails", "~> 7.0.4", ">= 7.0.4.3"
+             ^^^^^^^^^^
+Gemfile:5:26: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "rails", "~> 7.0.4", ">= 7.0.4.3"
+                         ^^^^^^^^^^^^
+Gemfile:8:5: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "sprockets-rails"
+    ^^^^^^^^^^^^^^^^^
+Gemfile:11:5: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "sqlite3", "~> 1.6"
+    ^^^^^^^^^
+Gemfile:11:16: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "sqlite3", "~> 1.6"
+               ^^^^^^^^
+Gemfile:14:5: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "puma", "~> 5.0"
+    ^^^^^^
+Gemfile:14:13: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "puma", "~> 5.0"
+            ^^^^^^^^
+Gemfile:17:5: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "importmap-rails"
+    ^^^^^^^^^^^^^^^^^
+Gemfile:20:5: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "turbo-rails"
+    ^^^^^^^^^^^^^
+Gemfile:23:5: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "stimulus-rails"
+    ^^^^^^^^^^^^^^^^
+Gemfile:26:5: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "jbuilder"
+    ^^^^^^^^^^
+Gemfile:29:5: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "redis", "~> 4.0"
+    ^^^^^^^
+Gemfile:29:14: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "redis", "~> 4.0"
+             ^^^^^^^^
+Gemfile:38:5: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+    ^^^^^^^^^^^^^
+Gemfile:38:34: C: [Corrected] Layout/SpaceInsidePercentLiteralDelimiters: Do not use spaces inside percent literal delimiters.
+gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+                                 ^
+Gemfile:38:62: C: [Corrected] Layout/SpaceInsidePercentLiteralDelimiters: Do not use spaces inside percent literal delimiters.
+gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+                                                             ^
+Gemfile:41:5: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "bootsnap", require: false
+    ^^^^^^^^^^
+Gemfile:51:7: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+      ^^^^^^^
+Gemfile:51:30: C: [Corrected] Layout/SpaceInsidePercentLiteralDelimiters: Do not use spaces inside percent literal delimiters.
+  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+                             ^
+Gemfile:51:50: C: [Corrected] Layout/SpaceInsidePercentLiteralDelimiters: Do not use spaces inside percent literal delimiters.
+  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+                                                 ^
+Gemfile:52:7: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  gem "rubocop-rails", require: false
+      ^^^^^^^^^^^^^^^
+Gemfile:53:7: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  gem "rubocop-rspec", require: false
+      ^^^^^^^^^^^^^^^
+Gemfile:58:7: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  gem "web-console"
+      ^^^^^^^^^^^^^
+Gemfile:60:7: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  gem "rspec-rails"
+      ^^^^^^^^^^^^^
+Gemfile:71:7: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  gem "rspec"
+      ^^^^^^^
+Gemfile:72:3: C: [Corrected] Bundler/OrderedGems: Gems should be sorted in an alphabetical order within their section of the Gemfile. Gem capybara should appear before rspec.
+  gem "capybara"
+  ^^^^^^^^^^^^^^
+Gemfile:72:7: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  gem "capybara"
+      ^^^^^^^^^^
+Gemfile:73:7: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  gem "selenium-webdriver"
+      ^^^^^^^^^^^^^^^^^^^^
+Gemfile:74:7: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  gem "webdrivers"
+      ^^^^^^^^^^^^
+Rakefile:4:18: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require_relative "config/application"
+                 ^^^^^^^^^^^^^^^^^^^^
+app/controllers/api/list_items_controller.rb:8:5: C: [Corrected] Style/EmptyMethod: Put empty method definitions on a single line.
+    def index ...
+    ^^^^^^^^^
+app/controllers/api/list_items_controller.rb:12:5: C: [Corrected] Style/EmptyMethod: Put empty method definitions on a single line.
+    def show ...
+    ^^^^^^^^
+app/controllers/api/todo_lists_controller.rb:8:30: C: [Corrected] Rails/RedundantActiveRecordAllMethod: Redundant all detected.
+      @todo_lists = TodoList.all.includes(:list_items)
+                             ^^^
+app/controllers/api/todo_lists_controller.rb:12:5: C: [Corrected] Style/EmptyMethod: Put empty method definitions on a single line.
+    def show ...
+    ^^^^^^^^
+app/controllers/application_controller.rb:5:5: C: [Corrected] Style/RaiseArgs: Provide an exception class and message as arguments to raise.
+    raise ActionController::RoutingError.new('Not supported format')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/list_items_controller.rb:13:30: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+        format.html { render "todo_lists/show", status: :unprocessable_entity }
+                             ^^^^^^^^^^^^^^^^^
+app/controllers/list_items_controller.rb:24:30: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+        format.html { render "todo_lists/show", status: :unprocessable_entity }
+                             ^^^^^^^^^^^^^^^^^
+app/controllers/todo_lists_controller.rb:11:3: C: [Corrected] Style/EmptyMethod: Put empty method definitions on a single line.
+  def show ...
+  ^^^^^^^^
+app/controllers/todo_lists_controller.rb:20:3: C: [Corrected] Style/EmptyMethod: Put empty method definitions on a single line.
+  def edit ...
+  ^^^^^^^^
+app/controllers/todo_lists_controller.rb:27:60: C: Rails/I18nLocaleTexts: Move locale texts to the locale files in the config/locales directory.
+        format.html { redirect_to todo_lists_path, notice: 'Todo list was successfully created.' }
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/todo_lists_controller.rb:29:60: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+        format.html { redirect_to todo_lists_path, notice: "Todo list was successfully created." }
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/todo_lists_controller.rb:39:60: C: Rails/I18nLocaleTexts: Move locale texts to the locale files in the config/locales directory.
+        format.html { redirect_to todo_lists_path, notice: 'Todo list was successfully updated.' }
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/todo_lists_controller.rb:41:60: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+        format.html { redirect_to todo_lists_path, notice: "Todo list was successfully updated." }
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/todo_lists_controller.rb:51:58: C: Rails/I18nLocaleTexts: Move locale texts to the locale files in the config/locales directory.
+      format.html { redirect_to todo_lists_path, notice: 'Todo list was successfully destroyed.' }
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/todo_lists_controller.rb:53:58: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      format.html { redirect_to todo_lists_path, notice: "Todo list was successfully destroyed." }
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/todo_lists_controller.rb:60:53: C: Rails/I18nLocaleTexts: Move locale texts to the locale files in the config/locales directory.
+      format.html { redirect_to @todo_list, notice: 'Updating all items...' }
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/todo_lists_controller.rb:61:50: C: Rails/I18nLocaleTexts: Move locale texts to the locale files in the config/locales directory.
+      format.turbo_stream { flash.now[:notice] = 'Updating all items...' }
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/todo_lists_controller.rb:62:53: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      format.html { redirect_to @todo_list, notice: "Updating all items..." }
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/todo_lists_controller.rb:63:50: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      format.turbo_stream { flash.now[:notice] = "Updating all items..." }
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^
+app/jobs/update_list_items_job.rb:4:3: C: Metrics/MethodLength: Method has too many lines. [11/10]
+  def perform(todo_list_id, attributes) ...
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/jobs/update_list_items_job.rb:6:26: C: Rails/SkipsModelValidations: Avoid using update_all because it skips validations.
+    todo_list.list_items.update_all(attributes)
+                         ^^^^^^^^^^
+app/jobs/update_list_items_job.rb:7:1: C: [Corrected] Layout/TrailingWhitespace: Trailing whitespace detected.
+app/jobs/update_list_items_job.rb:16:15: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      target: "flash",
+              ^^^^^^^
+app/jobs/update_list_items_job.rb:17:16: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      partial: "layouts/flash",
+               ^^^^^^^^^^^^^^^
+app/jobs/update_list_items_job.rb:18:34: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      locals: { flash: { notice: "All items updated!" } }
+                                 ^^^^^^^^^^^^^^^^^^^^
+app/mailers/application_mailer.rb:2:17: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  default from: "from@example.com"
+                ^^^^^^^^^^^^^^^^^^
+app/mailers/application_mailer.rb:3:10: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  layout "mailer"
+         ^^^^^^^^
+app/models/todo_list.rb:6:46: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  after_create_commit { broadcast_prepend_to "todo_lists" }
+                                             ^^^^^^^^^^^^
+app/models/todo_list.rb:7:46: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  after_update_commit { broadcast_replace_to "todo_lists" }
+                                             ^^^^^^^^^^^^
+app/models/todo_list.rb:8:46: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  after_destroy_commit { broadcast_remove_to "todo_lists" }
+                                             ^^^^^^^^^^^^
+app/models/todo_list.rb:9:4: C: [Corrected] Layout/TrailingEmptyLines: Final newline missing.
+end
+
+app/views/api/list_items/index.json.jbuilder:1:45: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+json.array! @todo_list.list_items, partial: "api/list_items/list_item", as: :list_item
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/views/api/list_items/show.json.jbuilder:1:15: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+json.partial! "api/list_items/list_item", list_item: @list_item
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/views/api/todo_lists/index.json.jbuilder:1:35: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+json.array! @todo_lists, partial: "api/todo_lists/todo_list", as: :todo_list
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/views/api/todo_lists/index.json.jbuilder:1:77: C: [Corrected] Layout/TrailingEmptyLines: Final newline missing.
+json.array! @todo_lists, partial: "api/todo_lists/todo_list", as: :todo_list
+
+app/views/api/todo_lists/show.json.jbuilder:1:15: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+json.partial! "api/todo_lists/todo_list", todo_list: @todo_list
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+config.ru:3:18: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require_relative "config/environment"
+                 ^^^^^^^^^^^^^^^^^^^^
+config/application.rb:1:18: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require_relative "boot"
+                 ^^^^^^
+config/application.rb:3:9: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "rails/all"
+        ^^^^^^^^^^^
+config/boot.rb:1:5: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["BUNDLE_GEMFILE"] ||= File.expand_path("../Gemfile", __dir__)
+    ^^^^^^^^^^^^^^^^
+config/boot.rb:1:44: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["BUNDLE_GEMFILE"] ||= File.expand_path("../Gemfile", __dir__)
+                                           ^^^^^^^^^^^^
+config/boot.rb:3:9: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "bundler/setup" # Set up gems listed in the Gemfile.
+        ^^^^^^^^^^^^^^^
+config/boot.rb:4:9: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "bootsnap/setup" # Speed up boot time by caching expensive operations.
+        ^^^^^^^^^^^^^^^^
+config/environment.rb:2:18: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require_relative "application"
+                 ^^^^^^^^^^^^^
+config/importmap.rb:3:5: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+pin "application", preload: true
+    ^^^^^^^^^^^^^
+config/importmap.rb:4:5: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+pin "@hotwired/turbo-rails", to: "turbo.min.js", preload: true
+    ^^^^^^^^^^^^^^^^^^^^^^^
+config/importmap.rb:4:34: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+pin "@hotwired/turbo-rails", to: "turbo.min.js", preload: true
+                                 ^^^^^^^^^^^^^^
+config/importmap.rb:5:5: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+pin "@hotwired/stimulus", to: "stimulus.min.js", preload: true
+    ^^^^^^^^^^^^^^^^^^^^
+config/importmap.rb:5:31: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+pin "@hotwired/stimulus", to: "stimulus.min.js", preload: true
+                              ^^^^^^^^^^^^^^^^^
+config/importmap.rb:6:5: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+pin "@hotwired/stimulus-loading", to: "stimulus-loading.js", preload: true
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+config/importmap.rb:6:39: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+pin "@hotwired/stimulus-loading", to: "stimulus-loading.js", preload: true
+                                      ^^^^^^^^^^^^^^^^^^^^^
+config/importmap.rb:7:14: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+pin_all_from "app/javascript/controllers", under: "controllers"
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+config/importmap.rb:7:51: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+pin_all_from "app/javascript/controllers", under: "controllers"
+                                                  ^^^^^^^^^^^^^
+config/initializers/assets.rb:4:43: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+Rails.application.config.assets.version = "1.0"
+                                          ^^^^^
+config/initializers/filter_parameter_logging.rb:6:47: C: [Corrected] Style/SymbolArray: Use %i or %I for an array of symbols.
+Rails.application.config.filter_parameters += [ ...
+                                              ^
+config/puma.rb:7:25: C: [Corrected] Style/RedundantFetchBlock: Use fetch("RAILS_MAX_THREADS", 5) instead of fetch("RAILS_MAX_THREADS") { 5 }.
+max_threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+config/puma.rb:7:31: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+max_threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
+                              ^^^^^^^^^^^^^^^^^^^
+config/puma.rb:8:31: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+min_threads_count = ENV.fetch("RAILS_MIN_THREADS") { max_threads_count }
+                              ^^^^^^^^^^^^^^^^^^^
+config/puma.rb:14:34: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+worker_timeout 3600 if ENV.fetch("RAILS_ENV", "development") == "development"
+                                 ^^^^^^^^^^^
+config/puma.rb:14:47: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+worker_timeout 3600 if ENV.fetch("RAILS_ENV", "development") == "development"
+                                              ^^^^^^^^^^^^^
+config/puma.rb:14:65: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+worker_timeout 3600 if ENV.fetch("RAILS_ENV", "development") == "development"
+                                                                ^^^^^^^^^^^^^
+config/puma.rb:18:10: C: [Corrected] Style/RedundantFetchBlock: Use fetch("PORT", 3000) instead of fetch("PORT") { 3000 }.
+port ENV.fetch("PORT") { 3000 }
+         ^^^^^^^^^^^^^^^^^^^^^^
+config/puma.rb:18:16: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+port ENV.fetch("PORT") { 3000 }
+               ^^^^^^
+config/puma.rb:22:23: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+environment ENV.fetch("RAILS_ENV") { "development" }
+                      ^^^^^^^^^^^
+config/puma.rb:22:38: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+environment ENV.fetch("RAILS_ENV") { "development" }
+                                     ^^^^^^^^^^^^^
+config/puma.rb:25:19: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
+                  ^^^^^^^^^
+config/puma.rb:25:32: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
+                               ^^^^^^^^^^^^^^^^^^^^^
+config/routes.rb:15:8: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  root "todo_lists#index"
+       ^^^^^^^^^^^^^^^^^^
+db/migrate/20230404162028_add_todo_lists.rb:3:5: C: Rails/CreateTableWithTimestamps: Add timestamps when creating a new table.
+    create_table :todo_lists do |t| ...
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+db/seeds.rb:5:52: C: [Corrected] Layout/TrailingEmptyLines: Final newline missing.
+TodoList.create(name: 'Create TodoList controller')
+
+spec/controllers/api/todo_lists_controller_spec.rb:11:16: C: [Corrected] Style/BlockDelimiters: Avoid using {...} for multi-line blocks.
+        expect {
+               ^
+spec/controllers/api/todo_lists_controller_spec.rb:24:7: C: RSpec/ExampleLength: Example has too many lines. [9/5]
+      it 'includes todo list records' do ...
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/controllers/api/todo_lists_controller_spec.rb:27:22: C: [Corrected] Rails/ResponseParsedBody: Prefer response.parsed_body to JSON.parse(response.body).
+        todo_lists = JSON.parse(response.body)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/controllers/api/todo_lists_controller_spec.rb:31:41: C: [Corrected] RSpec/MatchArray: Prefer contain_exactly when matching an array literal.
+          expect(todo_lists[0].keys).to match_array(['id', 'name', 'url'])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/controllers/api/todo_lists_controller_spec.rb:31:53: C: [Corrected] Style/WordArray: Use %w or %W for an array of words.
+          expect(todo_lists[0].keys).to match_array(['id', 'name', 'url'])
+                                                    ^^^^^^^^^^^^^^^^^^^^^
+spec/controllers/todo_lists_controller_spec.rb:4:45: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  let!(:todo_list) { TodoList.create!(name: "Test List") }
+                                            ^^^^^^^^^^^
+spec/controllers/todo_lists_controller_spec.rb:6:12: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  describe "POST #mark_all_done" do
+           ^^^^^^^^^^^^^^^^^^^^^
+spec/controllers/todo_lists_controller_spec.rb:7:8: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    it "enqueues UpdateListItemsJob" do
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/controllers/todo_lists_controller_spec.rb:9:14: C: [Corrected] Style/BlockDelimiters: Avoid using {...} for multi-line blocks.
+      expect {
+             ^
+spec/controllers/todo_lists_controller_spec.rb:14:8: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    it "redirects to the todo list" do
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/jobs/update_list_items_job_spec.rb:4:44: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  let(:todo_list) { TodoList.create!(name: "Test List") }
+                                           ^^^^^^^^^^^
+spec/jobs/update_list_items_job_spec.rb:5:3: C: RSpec/IndexedLet: This let statement uses 1 in its name. Please give it a meaningful name.
+  let!(:item1) { todo_list.list_items.create!(description: 'Item 1', done: false) }
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/jobs/update_list_items_job_spec.rb:5:60: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  let!(:item1) { todo_list.list_items.create!(description: "Item 1", done: false) }
+                                                           ^^^^^^^^
+spec/jobs/update_list_items_job_spec.rb:6:3: C: RSpec/IndexedLet: This let statement uses 2 in its name. Please give it a meaningful name.
+  let!(:item2) { todo_list.list_items.create!(description: 'Item 2', done: false) }
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/jobs/update_list_items_job_spec.rb:6:60: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  let!(:item2) { todo_list.list_items.create!(description: "Item 2", done: false) }
+                                                           ^^^^^^^^
+spec/jobs/update_list_items_job_spec.rb:8:3: C: RSpec/MultipleExpectations: Example has too many expectations [2/1].
+  it 'updates all items in the list' do
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/jobs/update_list_items_job_spec.rb:8:6: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "updates all items in the list" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/jobs/update_list_items_job_spec.rb:9:5: C: [Corrected] RSpec/DescribedClass: Use described_class instead of UpdateListItemsJob.
+    UpdateListItemsJob.perform_now(todo_list.id, done: true)
+    ^^^^^^^^^^^^^^^^^^
+spec/jobs/update_list_items_job_spec.rb:10:1: C: [Corrected] Layout/TrailingWhitespace: Trailing whitespace detected.
+spec/jobs/update_list_items_job_spec.rb:15:6: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "broadcasts updates to each item" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/jobs/update_list_items_job_spec.rb:17:12: C: [Corrected] Style/BlockDelimiters: Avoid using {...} for multi-line blocks.
+    expect {
+           ^
+spec/jobs/update_list_items_job_spec.rb:18:7: C: [Corrected] RSpec/DescribedClass: Use described_class instead of UpdateListItemsJob.
+      UpdateListItemsJob.perform_now(todo_list.id, done: true)
+      ^^^^^^^^^^^^^^^^^^
+spec/models/list_item_spec.rb:12:5: C: RSpec/MultipleExpectations: Example has too many expectations [2/1].
+    it 'is invalid without a description' do
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/models/list_item_spec.rb:13:14: C: [Corrected] RSpec/DescribedClass: Use described_class instead of ListItem.
+      item = ListItem.new(description: nil)
+             ^^^^^^^^
+spec/models/list_item_spec.rb:20:14: C: [Corrected] RSpec/DescribedClass: Use described_class instead of ListItem.
+      item = ListItem.new(description: 'Test Item', todo_list: todo_list)
+             ^^^^^^^^
+spec/models/todo_list_spec.rb:5:5: C: RSpec/MultipleExpectations: Example has too many expectations [2/1].
+    it 'has many list_items' do
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+spec/models/todo_list_spec.rb:13:5: C: RSpec/MultipleExpectations: Example has too many expectations [2/1].
+    it 'is invalid without a name' do
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/models/todo_list_spec.rb:14:14: C: [Corrected] RSpec/DescribedClass: Use described_class instead of TodoList.
+      list = TodoList.new(name: nil)
+             ^^^^^^^^
+spec/models/todo_list_spec.rb:20:14: C: [Corrected] RSpec/DescribedClass: Use described_class instead of TodoList.
+      list = TodoList.new(name: 'Test List')
+             ^^^^^^^^
+spec/rails_helper.rb:6:7: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+abort("The Rails environment is running in production mode!") if Rails.env.production?
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/rails_helper.rb:34:25: C: [Corrected] Rails/FilePath: Prefer Rails.root.join('path/to').
+  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/rails_helper.rb:34:25: C: [Corrected] Style/RedundantInterpolation: Prefer to_s over string interpolation.
+  config.fixture_path = "#{Rails.root.join("spec/fixtures")}"
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/rails_helper.rb:34:28: C: [Corrected] Style/RedundantConstantBase: Remove redundant ::.
+  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+                           ^^
+spec/rails_helper.rb:34:41: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  config.fixture_path = Rails.root.join("spec/fixtures").to_s
+                                        ^^^^^^^^^^^^^^^
+spec/rails_helper.rb:34:44: C: [Corrected] Style/StringLiteralsInInterpolation: Prefer single-quoted strings inside interpolations.
+  config.fixture_path = "#{Rails.root.join("spec/fixtures")}"
+                                           ^^^^^^^^^^^^^^^
+spec/requests/api/list_items_spec.rb:8:5: C: RSpec/MultipleExpectations: Example has too many expectations [2/1].
+    it 'returns all items for the list' do
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/api/list_items_spec.rb:11:14: C: [Corrected] Rails/ResponseParsedBody: Prefer response.parsed_body to JSON.parse(response.body).
+      expect(JSON.parse(response.body).size).to eq(1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/api/list_items_spec.rb:16:5: C: RSpec/ExampleLength: Example has too many lines. [6/5]
+    it 'returns the list item' do ...
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/api/list_items_spec.rb:16:5: C: RSpec/MultipleExpectations: Example has too many expectations [4/1].
+    it 'returns the list item' do
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/api/list_items_spec.rb:19:23: C: [Corrected] Rails/ResponseParsedBody: Prefer response.parsed_body to JSON.parse(response.body).
+      json_response = JSON.parse(response.body)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/api/list_items_spec.rb:29:5: C: RSpec/MultipleExpectations: Example has too many expectations [2/1].
+    it 'creates a new list item' do
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/api/list_items_spec.rb:30:14: C: [Corrected] Style/BlockDelimiters: Avoid using {...} for multi-line blocks.
+      expect {
+             ^
+spec/requests/api/list_items_spec.rb:43:5: C: RSpec/MultipleExpectations: Example has too many expectations [2/1].
+    it 'updates the list item' do
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/api/list_items_spec.rb:51:5: C: RSpec/MultipleExpectations: Example has too many expectations [2/1].
+    it 'destroys the list item' do
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/api/list_items_spec.rb:52:14: C: [Corrected] Style/BlockDelimiters: Avoid using {...} for multi-line blocks.
+      expect {
+             ^
+spec/requests/api/todo_lists_spec.rb:7:5: C: RSpec/MultipleExpectations: Example has too many expectations [2/1].
+    it 'returns all todo lists' do
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/api/todo_lists_spec.rb:10:14: C: [Corrected] Rails/ResponseParsedBody: Prefer response.parsed_body to JSON.parse(response.body).
+      expect(JSON.parse(response.body).size).to eq(1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/api/todo_lists_spec.rb:15:5: C: RSpec/ExampleLength: Example has too many lines. [6/5]
+    it 'returns the todo list' do ...
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/api/todo_lists_spec.rb:15:5: C: RSpec/MultipleExpectations: Example has too many expectations [4/1].
+    it 'returns the todo list' do
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/api/todo_lists_spec.rb:18:23: C: [Corrected] Rails/ResponseParsedBody: Prefer response.parsed_body to JSON.parse(response.body).
+      json_response = JSON.parse(response.body)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/api/todo_lists_spec.rb:28:5: C: RSpec/MultipleExpectations: Example has too many expectations [2/1].
+    it 'creates a new todo list' do
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/api/todo_lists_spec.rb:29:14: C: [Corrected] Style/BlockDelimiters: Avoid using {...} for multi-line blocks.
+      expect {
+             ^
+spec/requests/api/todo_lists_spec.rb:42:5: C: RSpec/MultipleExpectations: Example has too many expectations [2/1].
+    it 'updates the todo list' do
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/api/todo_lists_spec.rb:50:5: C: RSpec/MultipleExpectations: Example has too many expectations [2/1].
+    it 'destroys the todo list' do
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/api/todo_lists_spec.rb:51:14: C: [Corrected] Style/BlockDelimiters: Avoid using {...} for multi-line blocks.
+      expect {
+             ^
+spec/requests/list_items_spec.rb:3:16: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+RSpec.describe "ListItems", type: :request do
+               ^^^^^^^^^^^
+spec/requests/list_items_spec.rb:4:45: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  let!(:todo_list) { TodoList.create!(name: "My List") }
+                                            ^^^^^^^^^
+spec/requests/list_items_spec.rb:5:64: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  let!(:list_item) { todo_list.list_items.create!(description: "Item 1") }
+                                                               ^^^^^^^^
+spec/requests/list_items_spec.rb:7:12: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  describe "POST /todolists/:todo_list_id/items" do
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/list_items_spec.rb:8:5: C: RSpec/MultipleExpectations: Example has too many expectations [2/1].
+    it 'creates a new item and redirects' do
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/list_items_spec.rb:8:8: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    it "creates a new item and redirects" do
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/list_items_spec.rb:9:14: C: [Corrected] Style/BlockDelimiters: Avoid using {...} for multi-line blocks.
+      expect {
+             ^
+spec/requests/list_items_spec.rb:10:88: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+        post todo_list_list_items_path(todo_list), params: { list_item: { description: "New Item" } }
+                                                                                       ^^^^^^^^^^
+spec/requests/list_items_spec.rb:15:8: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    it "creates a new item with turbo stream" do
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/list_items_spec.rb:16:86: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      post todo_list_list_items_path(todo_list), params: { list_item: { description: "New Item" } }, as: :turbo_stream
+                                                                                     ^^^^^^^^^^
+spec/requests/list_items_spec.rb:17:41: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      expect(response.media_type).to eq("text/vnd.turbo-stream.html")
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/list_items_spec.rb:21:12: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  describe "PATCH /todolists/:todo_list_id/items/:id" do
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/list_items_spec.rb:22:5: C: RSpec/MultipleExpectations: Example has too many expectations [2/1].
+    it 'updates the item' do
+    ^^^^^^^^^^^^^^^^^^^^^
+spec/requests/list_items_spec.rb:22:8: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    it "updates the item" do
+       ^^^^^^^^^^^^^^^^^^
+spec/requests/list_items_spec.rb:29:12: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  describe "DELETE /todolists/:todo_list_id/items/:id" do
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/list_items_spec.rb:30:5: C: RSpec/MultipleExpectations: Example has too many expectations [2/1].
+    it 'destroys the item' do
+    ^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/list_items_spec.rb:30:8: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    it "destroys the item" do
+       ^^^^^^^^^^^^^^^^^^^
+spec/requests/list_items_spec.rb:31:14: C: [Corrected] Style/BlockDelimiters: Avoid using {...} for multi-line blocks.
+      expect {
+             ^
+spec/requests/todo_lists_spec.rb:3:16: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+RSpec.describe "TodoLists", type: :request do
+               ^^^^^^^^^^^
+spec/requests/todo_lists_spec.rb:4:45: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  let!(:todo_list) { TodoList.create!(name: "My List") }
+                                            ^^^^^^^^^
+spec/requests/todo_lists_spec.rb:6:12: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  describe "POST /todolists/:id/mark_all_done" do
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/todo_lists_spec.rb:7:5: C: RSpec/MultipleExpectations: Example has too many expectations [2/1].
+    it 'updates all items via background job' do
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/todo_lists_spec.rb:7:8: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    it "updates all items via background job" do
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/todo_lists_spec.rb:14:5: C: RSpec/MultipleExpectations: Example has too many expectations [2/1].
+    it 'responds with turbo_stream' do
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/todo_lists_spec.rb:14:8: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    it "responds with turbo_stream" do
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/todo_lists_spec.rb:16:41: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      expect(response.media_type).to eq("text/vnd.turbo-stream.html")
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/todo_lists_spec.rb:17:40: C: [Corrected] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      expect(response.body).to include("turbo-stream")
+                                       ^^^^^^^^^^^^^^
+spec/spec_helper.rb:49:1: C: [Corrected] Style/BlockComments: Do not use block comments.
+=begin ...
+^^^^^^
+spec/spec_helper.rb:91:1: C: [Corrected] Layout/CommentIndentation: Incorrect indentation detected (column 0 instead of 2).
+#   Kernel.srand config.seed
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+48 files inspected, 186 offenses detected, 154 offenses corrected
+Tip: Based on detected gems, the following RuboCop extension libraries might be helpful:
+  * rubocop-capybara (https://rubygems.org/gems/rubocop-capybara)
+  * rubocop-rspec_rails (https://rubygems.org/gems/rubocop-rspec_rails)
+You can opt out of this message by adding the following to your config (see https://docs.rubocop.org/rubocop/extensions.html#extension-suggestions for more options):
+  AllCops:
+    SuggestExtensions: false
