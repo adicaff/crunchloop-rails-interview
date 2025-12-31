@@ -14,7 +14,7 @@
     <%= form.text_field :name, placeholder: "New Todo List Name..." %>
     <%= form.submit todo_list.new_record? ? "Create" : "Update", class: "btn-primary" %>
     <% unless todo_list.new_record? %>
-      <%= link_to "Cancel", todo_list, class: "btn-secondary" %>
+      <%= link_to "Cancel", todo_lists_path, class: "btn-secondary" %>
     <% end %>
   </div>
 <% end %>
